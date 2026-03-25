@@ -274,7 +274,7 @@ function VaultManager({ onUnlock }: { onUnlock: () => void }) {
 
 function MainApp() {
   const { activeVault, encryptionKey, isLocked } = useVault();
-  const [activeTab, setActiveTab] = useState<'tasks' | 'calendar' | 'about'>('tasks');
+  const [activeTab, setActiveTab] = useState<'tasks' | 'analytics' | 'calendar' | 'about'>('tasks');
 
   if (isLocked || !activeVault || !encryptionKey) {
     return <VaultManager onUnlock={() => { }} />;
@@ -291,6 +291,7 @@ function MainApp() {
         className="h-full"
       >
         {activeTab === 'tasks' && <TasksApp vaultId={activeVault.id} encryptionKey={encryptionKey} />}
+        {activeTab === 'analytics' && <AnalyticsApp vaultId={activeVault.id} encryptionKey={encryptionKey} />}
         {activeTab === 'calendar' && <CalendarApp vaultId={activeVault.id} encryptionKey={encryptionKey} />}
         {activeTab === 'about' && <AboutApp />}
       </motion.div>
