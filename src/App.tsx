@@ -4,6 +4,7 @@ import { Shield, Lock, KeyRound, Plus, Github, Heart, AlertTriangle } from 'luci
 import { ThemeProvider } from './components/ThemeProvider';
 import { useVault, VaultProvider } from '@vault/core';
 import { TasksApp } from './components/TasksApp';
+import { AnalyticsApp } from './components/AnalyticsApp';
 import { CalendarApp } from './components/CalendarApp';
 import { AboutApp } from './components/AboutApp';
 import { AppShell } from './components/AppShell';
