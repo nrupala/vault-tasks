@@ -1,7 +1,7 @@
 {
   "name": "@vault/tasks",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The world's most private zero-trust productivity and finance suite.",
   "author": "Nrupal Akolkar <nrupal@example.com>",
   "type": "module",
@@ -14,7 +14,10 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
     "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+
     "electron:build": "npm run build && electron-builder",
     "electron:dist:win": "npm run build && electron-builder --win",
     "electron:dist:mac": "npm run build && electron-builder --mac",
@@ -25,7 +28,6 @@
     "@capacitor/cli": "^7.6.0",
     "@capacitor/core": "^8.2.0",
     "@capacitor/ios": "^8.2.0",
-    "@vault/core": "workspace:*",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "dexie": "^4.3.0",
