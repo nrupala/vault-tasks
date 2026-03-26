@@ -52,7 +52,7 @@ export function AppShell({ children, activeTab, onTabChange }: AppShellProps) {
     } catch (err: any) {
       alert(`Voice Command Failed: ${err.message}`);
     }
-  }, [addItem]);
+  }, [createItem]);
 
   const { isListening, lastTranscript, startListening } = useVoiceCommands(handleVoiceCommand);
 
