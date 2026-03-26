@@ -14,7 +14,8 @@ import {
   Heart,
   FileText,
   Mic,
-  MicOff
+  MicOff,
+  RefreshCcw
 } from 'lucide-react';
 import { useTheme, Theme } from './ThemeProvider';
 import { useVault, useItems, useVoiceCommands, type ParsedCommand } from '@/lib/core';
@@ -194,6 +195,13 @@ export function AppShell({ children, activeTab, onTabChange }: AppShellProps) {
                   className="text-left text-xs py-1.5 hover:text-primary transition-colors flex items-center gap-2 disabled:opacity-50"
                 >
                   <Calendar className="w-3.5 h-3.5" /> Import Calendar (.ics)
+                </button>
+                <button
+                  disabled={importing}
+                  onClick={() => window.open('https://github.com/nrupala/vault-tracker/wiki/Sovereign-Sync', '_blank')}
+                  className="text-left text-xs py-1.5 hover:text-primary transition-colors flex items-center gap-2 disabled:opacity-50"
+                >
+                  <RefreshCcw className="w-3.5 h-3.5" /> Sovereign Sync (Cloud)
                 </button>
               </div>
             </div>
