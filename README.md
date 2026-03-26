@@ -13,10 +13,17 @@ Visit: **[nrupala.github.io/vault-tasks](https://nrupala.github.io/vault-tasks/)
 - **Privacy Analytics**: Heatmaps and productivity trends processed locally.
 - **Multi-Format Import**: Import tasks from **JSON**, **Text**, or **iCalendar (.ics)** files.
 
-## 🔒 Security First
-- **Local-Only Encryption**: Your data never touches a server.
-- **Master Key Derivation**: PBKDF2 with 100,000 iterations.
-- **Zero-Trust Architecture**: We have no access to your data, ever.
+## 🛡️ The Trust Manifest: Why Vault Tracker?
+
+In an era of "Privacy Theater," Vault Tasks is built on **Absolute Privacy by Architecture**. We don't ask for your trust; we make it mathematically irrelevant.
+
+### 💎 Our USP: Unbreakable Sovereignty
+1. **Zero-Knowledge by Default**: We never see your password, your keys, or your data. Encryption happens on *your* CPU, before storage.
+2. **The "Unbreakable Blob" Philosophy**: Even when synced to the cloud, your data remains an **AES-256-GCM encrypted blob**—indistinguishable from random noise to outsiders.
+3. **No Account, No Tracking**: No sign-ups, no cookies, no analytics. Your identity is your Master Password.
+4. **Local Mastery**: Your database is on your device. You own the hardware, the database, and the keys.
+
+---
 
 ## 🛠️ Tech Stack
 - **Core**: React 19, TypeScript, Vite
