@@ -34,3 +34,16 @@ In an era of "Privacy Theater," Vault Tasks is built on **Absolute Privacy by Ar
 ---
 Part of the [Vault Tracker Ecosystem](https://github.com/nrupala/vault-tracker).
 Copyright © 2026 Nrupal Akolkar.
+
+## 🛠️ Development
+
+```bash
+npm install      # install dependencies
+npm run dev      # start the dev server
+npm run build    # typecheck + production build (tsc -b && vite build)
+npm test         # run tests (vitest run)
+npm run lint     # lint the codebase (eslint .)
+```
+
+Build, test, and lint commands are verified against `package.json` scripts.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the PR-flow discipline.
