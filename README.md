@@ -27,9 +27,11 @@ In an era of "Privacy Theater," Vault Tasks is built on **Absolute Privacy by Ar
 
 ## 🛠️ Tech Stack
 - **Core**: React 19, TypeScript, Vite
-- **Storage**: IndexedDB (Dexie.js)
+- **Storage**: SQLite + SQLCipher (family standard, migration in progress)
 - **Encryption**: Web Crypto API (AES-GCM)
 - **Mobile**: Capacitor (iOS/Android READY)
+
+**Storage standard (decided 2026-10-18):** This app is migrating from IndexedDB (Dexie.js) to SQLite with SQLCipher — the whole database file encrypted with AES-256, keys derived from your master password and never leaving your device. Until the migration lands, the app runs on Dexie/IndexedDB with all content AES-256-GCM encrypted before it reaches the storage layer. Zero-knowledge throughout: we never hold your keys or your data.
 
 ---
 Part of the [Vault Tracker Ecosystem](https://github.com/nrupala/vault-tracker).
