@@ -1,4 +1,4 @@
-# ✅ Vault Tasks v1.1.0
+# ✅ Vault Tasks v1.1.9
 
 **Private Task Management. Zero-Knowledge Security.**
 
