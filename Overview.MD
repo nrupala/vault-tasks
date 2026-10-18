@@ -1,6 +1,6 @@
 # 🏛️ System Overview & Architecture
 
-Vault Tracker is designed as a **Single Page Application (SPA)** with an embedded cryptographic engine. It follows a decentralized, client-side-only architecture to ensure absolute data sovereignty.
+Vault Tasks is designed as a **Single Page Application (SPA)** with an embedded cryptographic engine. It follows a decentralized, client-side-only architecture to ensure absolute data sovereignty.
 
 ## 🛠️ How it Works (Flowchart)
 

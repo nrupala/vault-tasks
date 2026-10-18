@@ -1,4 +1,4 @@
-# ✅ Vault Tasks v1.1.0
+# ✅ Vault Tasks v1.1.9
 
 **Private Task Management. Zero-Knowledge Security.**
 
@@ -13,7 +13,7 @@ Visit: **[nrupala.github.io/vault-tasks](https://nrupala.github.io/vault-tasks/)
 - **Privacy Analytics**: Heatmaps and productivity trends processed locally.
 - **Multi-Format Import**: Import tasks from **JSON**, **Text**, or **iCalendar (.ics)** files.
 
-## 🛡️ The Trust Manifest: Why Vault Tracker?
+## 🛡️ The Trust Manifest: Why Vault Tasks?
 
 In an era of "Privacy Theater," Vault Tasks is built on **Absolute Privacy by Architecture**. We don't ask for your trust; we make it mathematically irrelevant.
 
