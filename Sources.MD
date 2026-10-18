@@ -1,6 +1,6 @@
 # 📚 Sources & Attribution
 
-Vault Tracker is built upon the shoulders of giants in the Open Source community. 
+Vault Tasks is built upon the shoulders of giants in the Open Source community. 
 
 ## Core Dependencies
 
@@ -25,4 +25,4 @@ Vault Tracker is built upon the shoulders of giants in the Open Source community
 ### ⚖️ Legal
 This software is provided "as is", without warranty of any kind. 
 Copyright © 2026 Nrupal Akolkar.
-Licensed under the [MIT License](LICENSE).
+Licensed under the [AGPL-3.0 License](LICENSE).
