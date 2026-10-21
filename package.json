@@ -17,7 +17,6 @@
     "android:sync": "npx cap sync android",
     "android:open": "npx cap open android",
     "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
-
     "electron:build": "npm run build && electron-builder",
     "electron:dist:win": "npm run build && electron-builder --win",
     "electron:dist:mac": "npm run build && electron-builder --mac",
@@ -71,9 +70,9 @@
     "wait-on": "^8.0.5"
   },
   "build": {
-    "appId": "com.nrupal.vaulttracker",
-    "productName": "Vault Tracker",
-    "copyright": "Copyright © 2026 Nrupal Akolkar",
+    "appId": "com.vault.tasks",
+    "productName": "Vault Tasks",
+    "copyright": "Copyright \u00a9 2026 Nrupal Akolkar",
     "files": [
       "dist/**/*",
       "electron/**/*",
