@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.vault.tasks',
-  appName: 'Vault Tracker',
+  appName: 'Vault Tasks',
   webDir: 'dist'
 };
 

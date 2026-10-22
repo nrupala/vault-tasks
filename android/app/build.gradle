@@ -1,24 +1,46 @@
 apply plugin: 'com.android.application'
 
+import groovy.json.JsonSlurper
+
+// Version: package.json is the single source of truth.
+// versionName = the package version verbatim; versionCode is derived
+// monotonically from it: major*10000 + minor*100 + patch
+// (e.g. 1.1.9 -> 10109).
+def pkgJson = new JsonSlurper().parse(file('../../package.json'))
+def pkgVersionParts = pkgJson.version.tokenize('.').collect { it.toInteger() }
+def derivedVersionCode = pkgVersionParts[0] * 10000 + pkgVersionParts[1] * 100 + pkgVersionParts[2]
+
 android {
-    namespace "com.nrupal.vaulttracker"
+    namespace "com.vault.tasks"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.nrupal.vaulttracker"
+        applicationId "com.vault.tasks"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode derivedVersionCode
+        versionName pkgJson.version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
-             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
-             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    signingConfigs {
+        release {
+            def keystoreFile = System.getenv("VAULT_KEYSTORE_FILE")
+            if (keystoreFile) {
+                storeFile file(keystoreFile)
+                storePassword System.getenv("VAULT_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("VAULT_KEY_ALIAS") ?: "vault"
+                keyPassword System.getenv("VAULT_KEY_PASSWORD") ?: System.getenv("VAULT_KEYSTORE_PASSWORD")
+            }
         }
     }
     buildTypes {
         release {
             minifyEnabled false
+            if (System.getenv("VAULT_KEYSTORE_FILE")) {
+                signingConfig signingConfigs.release
+            }
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
