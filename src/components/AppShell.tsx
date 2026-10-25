@@ -15,7 +15,6 @@ import {
   FileText,
   Mic,
   MicOff,
-  RefreshCcw
 } from 'lucide-react';
 import { useTheme, Theme } from './ThemeProvider';
 import { useVault, useItems, useVoiceCommands, type ParsedCommand } from '@/lib/core';
@@ -120,7 +119,7 @@ export function AppShell({ children, activeTab, onTabChange }: AppShellProps) {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg tracking-tight">Vault</span>
-              <span className="text-[10px] text-muted-foreground font-mono">v1.1.0</span>
+              <span className="text-[10px] text-muted-foreground font-mono">v1.1.9</span>
             </div>
           </div>
           <button onClick={toggleSidebar} className="md:hidden p-1 rounded-md hover:bg-secondary">
@@ -195,13 +194,6 @@ export function AppShell({ children, activeTab, onTabChange }: AppShellProps) {
                   className="text-left text-xs py-1.5 hover:text-primary transition-colors flex items-center gap-2 disabled:opacity-50"
                 >
                   <Calendar className="w-3.5 h-3.5" /> Import Calendar (.ics)
-                </button>
-                <button
-                  disabled={importing}
-                  onClick={() => window.open('https://github.com/nrupala/vault-tracker/wiki/Sovereign-Sync', '_blank')}
-                  className="text-left text-xs py-1.5 hover:text-primary transition-colors flex items-center gap-2 disabled:opacity-50"
-                >
-                  <RefreshCcw className="w-3.5 h-3.5" /> Sovereign Sync (Cloud)
                 </button>
               </div>
             </div>
