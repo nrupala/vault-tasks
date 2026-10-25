@@ -29,13 +29,6 @@ export function TasksApp({ vaultId, encryptionKey }: { vaultId: string, encrypti
     return () => window.removeEventListener('vault-export', handleExport);
   }, [exportData]);
 
-  // Request Notification Permission
-  useEffect(() => {
-    if ("Notification" in window && Notification.permission === "default") {
-      Notification.requestPermission();
-    }
-  }, []);
-
   const tasks = items.filter((i: DecryptedItem) => i.type === 'task');
 
   const handleCreate = async (e: React.FormEvent) => {
