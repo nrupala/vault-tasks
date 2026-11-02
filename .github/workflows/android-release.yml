@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: [self-hosted, linux, aetheris]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
