@@ -84,9 +84,9 @@ jobs:
         if: steps.keystore.outputs.has_keystore == 'true'
         env:
           VAULT_KEYSTORE_FILE: ${{ runner.temp }}/vault-release.p12
-          VAULT_KEYSTORE_PASSWORD: <redacted>
+          VAULT_KEYSTORE_PASSWORD: ${{ secrets.VAULT_KEYSTORE_PASSWORD }}
           VAULT_KEY_ALIAS: vault
-          VAULT_KEY_PASSWORD: <redacted>
+          VAULT_KEY_PASSWORD: ${{ secrets.VAULT_KEY_PASSWORD }}
         run: |
           cd android
           chmod +x gradlew
