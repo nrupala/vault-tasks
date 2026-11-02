@@ -16,7 +16,10 @@ permissions:
 
 jobs:
   build:
-    runs-on: [self-hosted, Linux, X64, familyci]
+    runs-on: [self-hosted, Windows, X64, familyci-win]
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout Code
