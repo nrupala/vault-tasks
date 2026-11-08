@@ -38,7 +38,7 @@
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.5.0",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
@@ -53,9 +53,9 @@
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.27",
-    "concurrently": "^9.2.1",
-    "electron": "^42.11.3",
-    "electron-builder": "^26.8.1",
+    "concurrently": "^9.2.5",
+    "electron": "^42.11.16",
+    "electron-builder": "^26.18.0",
     "electron-is-dev": "^3.0.1",
     "eslint": "^8.57.1",
     "jsdom": "^28.1.0",
