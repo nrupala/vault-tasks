@@ -1,5 +1,7 @@
 # ✅ Vault Tasks v1.1.9
 
+[![Licence](https://img.shields.io/badge/licence-AGPL--3.0-blue.svg)](LICENSE)
+
 **Private Task Management. Zero-Knowledge Security.**
 
 Vault Tasks is a high-performance task management application designed for the privacy-conscious. It features hierarchical task lists, deadlines, and smart analytics, all secured with military-grade AES-256-GCM encryption entirely within your browser.
